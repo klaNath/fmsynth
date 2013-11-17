@@ -24,7 +24,7 @@ CLEAN_SUBPROJECTS=${CLEAN_SUBPROJECTS_${SUBPROJECTS}}
 
 
 # Project Name
-PROJECTNAME=fmsynth.X
+PROJECTNAME=fmsynth
 
 # Active Configuration
 DEFAULTCONF=default
