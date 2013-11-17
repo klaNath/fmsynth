@@ -49,9 +49,11 @@ typedef struct  fmreg
     unsigned short  freq;
 };
 
-int fminit(fmreg *contxt);
-
-int fmstep(fmreg *contxt);
+int fminit (fmreg *contxt);
+int fmstat (void);
+int fmstart (fmreg *contxt);
+int fmstep (fmreg *contxt);
+int fmstop (fmreg *contxt);
 
 unsigned int castfm(int);
 
