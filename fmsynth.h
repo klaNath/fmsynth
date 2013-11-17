@@ -9,6 +9,7 @@
 #define	FMSYNTH_H
 
 //Structure "fmreg" is synthesize phonic context
+//  phnum is number of synthesize phonic (IF SET "0", CONTEXT IS NOT VALID)
 //  opX is phase Register
 //  opXout is output each operators
 //  modX is input Modulator
@@ -21,6 +22,7 @@
 
 typedef struct  fmreg
 {
+    char            phnum;
     unsigned int    op0;
     unsigned int    op1;
     unsigned int    op2;
@@ -46,6 +48,13 @@ typedef struct  fmreg
     unsigned short  fmstatus;
     unsigned short  freq;
 };
+
+int fminit(fmreg *contxt);
+
+int fmstep(fmreg *contxt);
+
+unsigned int castfm(int);
+
 
 #endif
 
