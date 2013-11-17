@@ -19,7 +19,6 @@
 //  fmstatus is flags of fm synthesizer
 //  freq is operation frequency
 
-struct  fmreg;
 typedef struct  fmreg
 {
     unsigned int    op0;
