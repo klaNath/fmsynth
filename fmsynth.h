@@ -51,7 +51,7 @@ typedef struct  fmreg
 
 int fminit (*fmreg);
 int fmstat (void);
-int fmstart (*fmreg);
+int fmstart (*fmreg, unsigned short);
 int fmstep (*fmreg);
 int fmstop (*fmreg);
 
