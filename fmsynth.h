@@ -2,7 +2,7 @@
 
 /* 
  * File:   fmsynth.h
- * Author: kazusa
+ * Author: Kazusa Okuda
  *
  * Created on 2013/11/17, 22:58
  */
