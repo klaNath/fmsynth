@@ -10,7 +10,7 @@ void	fmrise(void){
 
 int	fminit(*fmreg){
 
-	if (fmreg->phnum == 0) return 0;
+	if (fmreg->phnum == 0) return -1;
 
 	fmreg = 0;
 	fmsynth_phonicnumber -= 1;
@@ -38,4 +38,11 @@ int	fmstart(*fmreg, unsigned short note){
 	 */
 
 	return 0;
+}
+
+int fmstop(*fmreg){
+
+  if (fmreg->phnum == 0)  return -1;
+
+
 }
