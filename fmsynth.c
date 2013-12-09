@@ -36,6 +36,10 @@ int	fmstart(*fmreg, unsigned short note){
 	 *必要なステータスフラグを定めてセットする
 	 *ヘッダーファイルのドキュメントも作る
 	 */
+  
+  fmreg->freq = note2freq[note];
+
+
 
 	return 0;
 }
