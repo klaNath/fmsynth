@@ -37,7 +37,7 @@ int	fmstart(*fmreg, unsigned short note){
 	 *ヘッダーファイルのドキュメントも作る
 	 */
   
-  fmreg->freq = note2freq[note];
+  fmreg->freq = note2freq[note - 36]
 
 
 
