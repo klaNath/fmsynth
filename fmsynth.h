@@ -24,7 +24,6 @@
 
 typedef struct  fmreg
 {
-    char            phnum;
     unsigned int    op0;
     unsigned int    op1;
     unsigned int    op2;
@@ -37,24 +36,33 @@ typedef struct  fmreg
     int             mod1;
     int             mod2;
     int             mod3;
+    unsigned short  freqmul1;
+    unsigned short  freqmul2;
+    unsigned short  freqmul3;
+    unsigned short  freqmul4;
     unsigned short  carry0;
     unsigned short  carry1;
     unsigned short  carry2;
     unsigned short  carry3;
-    unsigned short  envA;
-    unsigned short  envD;
-    unsigned short  envS;
-    unsigned short  envR;
+    unsigned short  env1A;
+    unsigned short  env1D;
+    unsigned short  env1S;
+    unsigned short  env1R;
+    unsigned short  env2D;
+    unsigned short  env2Sl;
+    unsigned short  env2St;
+    unsigned short  env2R;
     int             carrier;
-    unsigned short  envGen;
+    int             env1Gen;
+    int             env2Gen;
     unsigned short  fmstatus;
-    unsigned short  freq;
+    int  freq;
 };
 
 
 int     fmstep (*fmreg);
 
-int     note2freq[72];
+int     note2freq[72] ;
 
 #endif
 
