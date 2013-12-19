@@ -52,15 +52,9 @@ typedef struct  fmreg
 };
 
 
-void    fmrise(void);
-int     fminit (*fmreg);
-int     fmstat (void);
-int     fmstart (*fmreg, unsigned short);
 int     fmstep (*fmreg);
-int     fmstop (*fmreg);
 
-unsigned int castfm(int);
-
+int     note2freq[72];
 
 #endif
 
