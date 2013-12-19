@@ -10,19 +10,34 @@
 #ifndef FMSYNTH_H
 #define	FMSYNTH_H
 
-//Structure "fmreg" is synthesize phonic context
-//  phnum is number of synthesize phonic (IF SET "0", CONTEXT IS NOT VALID)
+//Structure "fmreg" is synthesize voice context
 //  opX is phase Register
 //  opXout is output each operators
 //  modX is input Modulator
 //  carryX is coefficient of output
-//  env{A,D,S,R} is Envelope controll numbers
-//  envGen is Envelope Generater status register
+//  env1{A,D,S,R} is Envelope controll numbers
+//  env2{D,sl,St,R} is modulator Envelope controll
+//  env{1,2}Gen is Envelope Generater status register
 //  carrier is conteiner of output date(is raw data)
 //  fmstatus is flags of fm synthesizer
 //  freq is operation frequency
 
-#define NOTE2FREQ( a ) note2freq[a]
+#define NOTE2FREQ( a ) note2freq[a - 36]
+
+// a in the NOTE2FREQ( a ) is MIDI note number
+// MIN 36 ~ MAX 108
+
+enum    fmstatusflag {
+    FMSYNTH_STOP,
+    FMSYNTH_ON,
+    FMSYNTH_ON_ATK,
+    FMSYNTH_ON_DEC,
+    FMSYNTH_ON_SUS,
+    FMSYNTH_ON_REL,
+    FMSYNTH_OFF,
+    FMSYNTH_INIT
+    };
+
 
 typedef struct  fmreg
 {
@@ -57,7 +72,7 @@ typedef struct  fmreg
     int             carrier;
     int             env1Gen;
     int             env2Gen;
-    unsigned short  fmstatus;
+    fmstatusflag      fmstatus;
     int  freq;
 };
 
