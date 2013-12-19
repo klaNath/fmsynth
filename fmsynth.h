@@ -22,6 +22,8 @@
 //  fmstatus is flags of fm synthesizer
 //  freq is operation frequency
 
+#define NOTE2FREQ( a ) note2freq[a]
+
 typedef struct  fmreg
 {
     unsigned int    op0;
@@ -59,10 +61,9 @@ typedef struct  fmreg
     int  freq;
 };
 
-
 int     fmstep (*fmreg);
 
-int     note2freq[72] ;
+const   int     note2freq[72] ;
 
 #endif
 
