@@ -7,8 +7,8 @@
  * Created on 2013/11/17, 22:23
  */
 
-//#include<plib.h>
-
+#include<plib.h>
+#include "fmsynth.h"
 void main(void) {
 
 }
