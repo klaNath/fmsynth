@@ -19,5 +19,14 @@
 
 # Netbeans File
 
-./dist
-./build
+./dist/
+./build/
+
+*.xml
+*.mk
+*.properties
+
+*.elf
+*.map
+*.hex
+*.o.d
